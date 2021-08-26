@@ -45,3 +45,10 @@ export default function App({
     </div>
   );
 }
+
+export async function getStaticProps(context) {
+  const s = { ss: "s" };
+  return {
+    props: { s }, // will be passed to the page component as props
+  };
+}
