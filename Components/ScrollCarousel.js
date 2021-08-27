@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import { useSpring, animated as a, interpolate } from "react-spring";
 import useScrollWidth from "./useScrollWidth";
+import useWindowScroll from "@react-hook/window-scroll";
 
 const ScrollCarousel = ({ children }) => {
   const [output, setOutput] = useState(null);
@@ -13,17 +14,11 @@ const ScrollCarousel = ({ children }) => {
   // the argument is the fps that the hook uses,
   // since react spring interpolates values we can safely reduce this below 60
 
-  const [scrollY, setScrollY] = useState(45);
+  const scrollY = useWindowScroll(45);
   const [{ st, xy }, set] = useSpring(() => ({ st: 0, xy: [0, 0] }));
 
   useEffect(() => {
-    const scrollCallBack = window.addEventListener("scroll", () => {
-      setScrollY(window.pageYOffset);
-      set({ st: scrollY });
-    });
-    return () => {
-      window.removeEventListener("scroll", scrollCallBack, true);
-    };
+    set({ st: scrollY });
   }, [scrollY, set]);
 
   const onMouseMove = useCallback(
@@ -44,26 +39,30 @@ const ScrollCarousel = ({ children }) => {
     elHeight =
       scrollWidth - (window.innerWidth - window.innerHeight) + width * 0.5; // scroll away when final viewport width is 0.5 done
 
-    interpTransform = interpolate([st, xy], (o, xy) => {
-      const mouseMoveDepth = 40; // not necessary, but nice to have
-      const x = width - (top - o) - width;
+    interpTransform = interpolate(
+      [st, xy],
+      (o, xy) => {
+        const mouseMoveDepth = 40; // not necessary, but nice to have
+        const x = width - (top - o) - width;
 
-      // (width * 0.5) so that it starts moving just slightly before it comes into view
-      if (x < -window.innerHeight - width * 0.5) {
-        // element is not yet in view, we're currently above it. so don't animate the translate value
-        return `translate3d(${window.innerHeight}px, 0, 0)`;
-      }
+        // (width * 0.5) so that it starts moving just slightly before it comes into view
+        if (x < -window.innerHeight - width * 0.5) {
+          // element is not yet in view, we're currently above it. so don't animate the translate value
+          return `translate3d(${window.innerHeight}px, 0, 0)`;
+        }
 
-      if (Math.abs(x) > elHeight) {
-        // element is not in view, currently below it.
-        return `translate3d(${elHeight}px, 0, 0)`;
-      }
+        if (Math.abs(x) > elHeight) {
+          // element is not in view, currently below it.
+          return `translate3d(${elHeight}px, 0, 0)`;
+        }
 
-      // else animate as usual
-      return `translate3d(${-x + -xy[0] / mouseMoveDepth}px, ${
-        -xy[1] / mouseMoveDepth
-      }px, 0)`;
-    });
+        // else animate as usual
+        return `translate3d(${-x + -xy[0] / mouseMoveDepth}px, ${
+          -xy[1] / mouseMoveDepth
+        }px, 0)`;
+      },
+      []
+    );
 
     if (interpTransform) {
       setOutput(
