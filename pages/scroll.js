@@ -10,7 +10,7 @@ const Scroll = () => {
         // just setting arbitrary values to simulate real content above and below the component
         style={{ height: "90vh", background: "gold" }}
       >
-        <h2>Content above</h2>
+        <h2>Content above New</h2>
       </div>
       {/* <ScrollCarousel>
         <div className="box">
