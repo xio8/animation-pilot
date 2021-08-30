@@ -23,10 +23,10 @@ const useStyles = makeStyles((theme) => ({
 	// Animation
 	"@keyframes scroll": {
 		"0%": {
-			transform: "translateX(0)",
+			transform: "translateX(calc(-250px * 7))",
 		},
 		"100%": {
-			transform: "translateX(calc(-250px * 7))",
+			transform: "translateX(0)",
 		},
 	},
 
@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Riverflow() {
-	const classes = useStyles();
+	const classes = useStyles({ icon: 7 });
 	return (
 		<>
 			<div className={classes.body}>
