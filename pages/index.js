@@ -1,13 +1,13 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-import { useState, useEffect} from "react";
-
+import { useState, useEffect } from "react";
+import HoriSection from "../Components/HoriScrollIndex";
 const useStyles = makeStyles((theme) => ({
   c0: { transform: "translate(130px,-130px)", transition: "transform 2s" },
   c1: { transform: "translate(-100px, -100px)", transition: "transform 2s" },
   c2: { transform: "translate(0px, 0px)", transition: "transform 2s" },
   c3: { transform: "translate(100px, 100px)", transition: "transform 2s" },
-  c4: { transform: "translate(-100px, 100px)", transition: "transform 2s" }
+  c4: { transform: "translate(-100px, 100px)", transition: "transform 2s" },
 }));
 export default function App({}) {
   const classes = useStyles();
@@ -17,7 +17,7 @@ export default function App({}) {
     classes.c1,
     classes.c2,
     classes.c3,
-    classes.c4
+    classes.c4,
   ]);
   const [a, sa] = useState(0);
 
@@ -61,6 +61,9 @@ export default function App({}) {
             </div>
           );
         })}
+      </div>
+      <div>
+        <HoriSection />
       </div>
     </>
   );
