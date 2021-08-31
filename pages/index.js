@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-
+import River from "../Components/Riverflow";
 import { useState, useEffect } from "react";
 import HoriSection from "../Components/HoriScrollIndex";
 const useStyles = makeStyles((theme) => ({
@@ -64,6 +64,9 @@ export default function App({}) {
       </div>
       <div>
         <HoriSection />
+        <div>
+          <River />
+        </div>
       </div>
     </>
   );
