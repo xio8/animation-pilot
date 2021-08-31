@@ -85,6 +85,33 @@ const journey = () => {
               phishing, and compliance risks
             </p>
           </div>
+          <div className={classes.div2}>
+            <h1>05</h1>
+            <h3>Why Should You Consider SysCloud for Cloud Backup?</h3>
+            <p>
+              Say goodbye to obsolete and passive backup services. With SysCloud
+              backup, automatically inspect backup archives for ransomware,
+              phishing, and compliance risks
+            </p>
+          </div>
+          <div className={classes.div2}>
+            <h1>06</h1>
+            <h3>Why Should You Consider SysCloud for Cloud Backup?</h3>
+            <p>
+              Say goodbye to obsolete and passive backup services. With SysCloud
+              backup, automatically inspect backup archives for ransomware,
+              phishing, and compliance risks
+            </p>
+          </div>
+          <div className={classes.div2}>
+            <h1>07</h1>
+            <h3>Why Should You Consider SysCloud for Cloud Backup?</h3>
+            <p>
+              Say goodbye to obsolete and passive backup services. With SysCloud
+              backup, automatically inspect backup archives for ransomware,
+              phishing, and compliance risks
+            </p>
+          </div>
         </div>
       </div>
     </div>
