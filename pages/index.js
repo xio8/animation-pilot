@@ -62,12 +62,7 @@ export default function App({}) {
           );
         })}
       </div>
-      <div>
-        <Scroll />
-        <div>
-          <River />
-        </div>
-      </div>
+     
     </>
   );
 }
