@@ -1,11 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
-
 import { makeStyles } from "@material-ui/core/styles";
 
-import HorizontalScroll from "./HoriScroll";
+import HorizontalScroll from "./horizontal-scroll";
+import Journey from "./journey";
 
-const useStyle = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   BumperSection: {
     textAlign: "center",
     padding: "128px 16px",
@@ -21,31 +20,14 @@ const useStyle = makeStyles((theme) => ({
     height: "100%",
     padding: "0 0 0 150px",
     display: "flex",
-    flexFlow: "row nowrap",
+    flexflow: "row nowrap",
     justifyContent: "flex-start",
     alignItems: "center",
   },
-  SampleCard: {
-    position: "relative",
-    height: "300px",
-    width: "500px",
-    backgroundColor: "#111f30",
-    marginRight: "75px",
-    flexShrink: 0,
-  },
 }));
 
-const SampleCards = React.memo(() =>
-  Array(8)
-    .fill(0)
-    .map((_e, i) => (
-      <div key={`sampleCard-${i}`} className={useStyle().SampleCard} />
-    ))
-);
-
-const App = () => {
-  const classes = useStyle();
-
+const scroll = () => {
+  const classes = useStyles();
   return (
     <div>
       <div className={classes.BumperSection}>
@@ -54,7 +36,7 @@ const App = () => {
       <div className={classes.HorizontalSection}>
         <HorizontalScroll>
           <div className={classes.CardsContainer}>
-            <SampleCards />
+            <Journey />
           </div>
         </HorizontalScroll>
       </div>
@@ -65,4 +47,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default scroll;
