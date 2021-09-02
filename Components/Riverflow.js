@@ -36,7 +36,7 @@ function Riverflow() {
 		slider: {
 			background: "white",
 			boxShadow: "0 10px 20px -5px rgba(0, 0, 0, .125)",
-			height: "300px",
+			height: "345px",
 			margin: "auto",
 			overflow: "hidden",
 			position: "relative",
@@ -66,13 +66,38 @@ function Riverflow() {
 			animation: "$scroll 20s linear infinite",
 			display: "flex",
 			width: `calc(250px * ${iconNum * 2})`,
+			position: "relative",
+			top: "62px",
+		},
+		slidetrack2: {
+			animation: "$scroll 20s linear infinite",
+			display: "flex",
+			width: `calc(250px * ${iconNum * 2})`,
+			position: "relative",
+			left: "126px",
+			top: "42px",
 		},
 
 		slide: {
 			display: "flex",
 			flexDirection: "column",
-			height: "300px",
 			width: "250px",
+		},
+		diamond1: {
+			width: "150px",
+			height: "150px",
+			backgroundColor: "blue",
+			borderRadius: "1em",
+			transform: "rotate(-45deg)",
+			transformOrigin: "0 100%",
+		},
+		diamond2: {
+			width: "150px",
+			height: "150px",
+			backgroundColor: "red",
+			borderRadius: "1em",
+			transform: "rotate(-45deg)",
+			transformOrigin: "0 100%",
 		},
 	}));
 	const classes = useStyles();
@@ -82,200 +107,90 @@ function Riverflow() {
 				<div className={classes.slider}>
 					<div className={classes.slidetrack}>
 						<div className={classes.slide}>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
+							<div className={classes.diamond1} />
 						</div>
 						<div className={classes.slide}>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
+							<div className={classes.diamond1} />
 						</div>
 						<div className={classes.slide}>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
+							<div className={classes.diamond1} />
 						</div>
 						<div className={classes.slide}>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
+							<div className={classes.diamond1} />
 						</div>
 						<div className={classes.slide}>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
+							<div className={classes.diamond1} />
 						</div>
 						<div className={classes.slide}>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
+							<div className={classes.diamond1} />
 						</div>
 						<div className={classes.slide}>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
+							<div className={classes.diamond1} />
 						</div>
 						<div className={classes.slide}>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
+							<div className={classes.diamond1} />
 						</div>
 						<div className={classes.slide}>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
+							<div className={classes.diamond1} />
 						</div>
 						<div className={classes.slide}>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
+							<div className={classes.diamond1} />
 						</div>
 						<div className={classes.slide}>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
+							<div className={classes.diamond1} />
 						</div>
 						<div className={classes.slide}>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
+							<div className={classes.diamond1} />
 						</div>
 						<div className={classes.slide}>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
+							<div className={classes.diamond1} />
 						</div>
 						<div className={classes.slide}>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
-								height="100"
-								width="250"
-								alt=""
-							/>
+							<div className={classes.diamond1} />
+						</div>
+					</div>
+					<div className={classes.slidetrack2}>
+						<div className={classes.slide}>
+							<div className={classes.diamond2} />
+						</div>
+						<div className={classes.slide}>
+							<div className={classes.diamond2} />
+						</div>
+						<div className={classes.slide}>
+							<div className={classes.diamond2} />
+						</div>
+						<div className={classes.slide}>
+							<div className={classes.diamond2} />
+						</div>
+						<div className={classes.slide}>
+							<div className={classes.diamond2} />
+						</div>
+						<div className={classes.slide}>
+							<div className={classes.diamond2} />
+						</div>
+						<div className={classes.slide}>
+							<div className={classes.diamond2} />
+						</div>
+						<div className={classes.slide}>
+							<div className={classes.diamond2} />
+						</div>
+						<div className={classes.slide}>
+							<div className={classes.diamond2} />
+						</div>
+						<div className={classes.slide}>
+							<div className={classes.diamond2} />
+						</div>
+						<div className={classes.slide}>
+							<div className={classes.diamond2} />
+						</div>
+						<div className={classes.slide}>
+							<div className={classes.diamond2} />
+						</div>
+						<div className={classes.slide}>
+							<div className={classes.diamond2} />
+						</div>
+						<div className={classes.slide}>
+							<div className={classes.diamond2} />
 						</div>
 					</div>
 				</div>
