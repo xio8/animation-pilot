@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
-
+import River from "../Components/Riverflow";
 import { useState, useEffect } from "react";
-import HoriSection from "../Components/HoriScrollIndex";
+import Scroll from "../Components/scroll";
 const useStyles = makeStyles((theme) => ({
   c0: { transform: "translate(130px,-130px)", transition: "transform 2s" },
   c1: { transform: "translate(-100px, -100px)", transition: "transform 2s" },
@@ -62,9 +62,7 @@ export default function App({}) {
           );
         })}
       </div>
-      <div>
-        <HoriSection />
-      </div>
+     
     </>
   );
 }
